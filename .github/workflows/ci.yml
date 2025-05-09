@@ -1,7 +1,7 @@
 name: CI Pipeline C++ - TugasPrak5
 
 on:
-  pushhh:
+  push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
