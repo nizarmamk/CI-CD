@@ -1,0 +1,36 @@
+name: CI Pipeline C++ - TugasPrak5
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Dependency
+      run: sudo apt-get install -y g++
+
+    - name: Create Input File
+      run: |
+        echo "1" > input.txt
+        echo "Halo" > input.txt
+        echo "0" > input.txt
+        echo "3" > input.txt
+        echo "0" > input.txt
+        echo "4" > input.txt
+        echo "0" > input.txt
+        echo "5" > input.txt
+    
+    - name: Compile Code
+      run: g++ -o main TugasPrak5.cpp
+
+    - name: Run Program
+      run: ./main
