@@ -36,7 +36,7 @@ void Push()
 {
 	if(!IsFull())
 	{
-		cout << "Masukkan Data : "; 
+		cout << "Masukkan Data Baru : "; 
 		cin >> stk.data[stk.top];
 		stk.top++;
 		cout << "Data berhasil ditambahkan." << endl;
